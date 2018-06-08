@@ -1,0 +1,297 @@
+<!doctype html>
+
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <title>
+      Week 1
+    </title>
+    
+    <script>
+    
+      // alert("Leon is a copycat"); //my first js line in html
+      
+      //https://www.w3schools.com/TAgs/ev_onclick.asp
+      function clickCheckbox() {
+        var element = document.getElementById("checkmarkID");
+        if (element.classList.contains("checkmarkChecked")) {
+          element.classList.add("checkmark");
+        } else {
+        element.classList.add("checkmarkChecked");
+        };
+      }
+
+    </script>
+    
+    <style type="text/css">
+      body, html {
+        width: 100%;
+        height: 100%;
+        background-color: #E1E1E1;
+        font-family: 'Roboto', sans-serif;
+      }
+
+      .header {
+        margin-bottom: 24px;
+        width: 100%;
+        height: 76px;
+        background-color: #4A90E2;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      button {
+        font-size: 24px;
+        color: #00408B;
+        background-color: #4A90E2;
+        border: 0px;
+        width: 160px;
+        height: 28px;
+        margin: 0 30px;
+        padding: 0;
+      }
+
+      .myTasks {
+        height: 76px;
+        border-bottom: solid 5px #00408B;
+        color: white;
+      }
+
+      button:hover {
+        cursor: pointer; 
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .addTask {
+        width: 620px;
+        height: 65px;
+        margin-bottom: 24px;
+
+        color: #C8C8C8;
+        font-size: 24px;
+      }
+
+      .container-inner {
+        width: 620px;
+        height: 102px;
+        font-size: 24px;
+        color: #000000;
+        background-color: #FFF2DC;
+        margin-bottom: 8px;
+
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .container-inner-white {
+        width: 620px;
+        height: 102px;
+        font-size: 24px;
+        color: #000000;
+        background-color: #F2F2F2;
+        margin-bottom: 8px;
+
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .square {
+        
+      }
+
+      .inner-line1 {
+        display: flex;
+        position: relative;
+        padding-left: 25px;
+      }
+
+      .inner-line1-icons {
+        display: flex;
+        width: 300px;
+        justify-content: flex-end;
+      }
+
+      .inner-line2 {
+        display: inline-flex;
+        margin-left: 72px;
+      }
+
+      .inner-line2-icons {
+        font-size:16px; 
+        color:#757575; 
+        margin-right: 15px
+      }
+
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 20px;
+        height: 25px;
+        width: 25px;
+        background-color: white;
+      }
+
+      .checkmarkChecked {
+        position: absolute;
+        top: 0;
+        left: 20px;
+        height: 25px;
+        width: 25px;
+        background-color: #2196F3;
+      }
+
+      .inner-text {
+        margin-left: 20px;
+      }
+
+      /* TODO: add checkmark indicator */
+
+
+    </style>
+  </head>
+
+  <body>
+    <!-- demo: https://hexschool.github.io/THE_F2E_Design/todolist/#artboard4 -->
+    <div class="header">
+      <button class="myTasks">
+        My Tasks
+      </button>
+      <button class="inProgress">
+        In Progress
+      </button>
+      <button class="completed">
+        Completed
+      </button>
+    </div>
+    <div class="container">
+      <input type="text" class="addTask" placeholder="   ＋  Add Task"> <!-- TODO: make words disappear onclick-->
+        <label onclick="clickCheckbox()">
+          <div class="container-inner"> <!-- TODO: how to repeat the whole container-inner without copying the code >> REACT-->
+            <div class="inner-line1">
+              <span class="checkmark" id="checkmarkID"></span>
+              <input type="checkbox" class="square">
+              <div class="inner-text">Type Something Here...</div>
+              <div class="inner-line1-icons">
+                <div style="font-size:24px; color:#F5A623; margin-right:20px">
+                  <i class="fas fa-star"></i>
+                </div>
+                <i class="fas fa-pencil-alt"></i>
+              </div>
+            </div>
+            <div class="inner-line2">
+              <div class="inner-line2-icons"> <!--TODO: how to customize the width and height-->
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+              <div class="inner-line2-icons">
+                3/21
+              </div>
+              <div class="inner-line2-icons">
+                <i class="far fa-file"></i>
+              </div>
+              <div class="inner-line2-icons">
+                <i class="far fa-comment"></i>
+              </div>
+            </div>
+          </div>
+        </label>
+        <label onclick="clickCheckbox()">
+            <div class="container-inner"> <!-- TODO: how to repeat the whole container-inner without copying the code >> REACT-->
+              <div class="inner-line1">
+                <span class="checkmark" id="checkmarkID"></span>
+                <input type="checkbox" class="square">
+                <div class="inner-text">Type Something Here...</div>
+                <div class="inner-line1-icons">
+                  <div style="font-size:24px; color:#F5A623; margin-right:20px">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <i class="fas fa-pencil-alt"></i>
+                </div>
+              </div>
+              <div class="inner-line2">
+                <div class="inner-line2-icons"> <!--TODO: how to customize the width and height-->
+                  <i class="fas fa-calendar-alt"></i>
+                </div>
+                <div class="inner-line2-icons">
+                  8/18
+                </div>
+                <div class="inner-line2-icons">
+                  <i class="far fa-file"></i>
+                </div>
+                <div class="inner-line2-icons">
+                  <i class="far fa-comment"></i>
+                </div>
+              </div>
+            </div>
+          </label>
+          <label onclick="clickCheckbox()">
+              <div class="container-inner"> <!-- TODO: how to repeat the whole container-inner without copying the code >> REACT-->
+                <div class="inner-line1">
+                  <span class="checkmark" id="checkmarkID"></span>
+                  <input type="checkbox" class="square">
+                  <div class="inner-text">Type Something Here...</div>
+                  <div class="inner-line1-icons">
+                    <div style="font-size:24px; color:#F5A623; margin-right:20px">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <i class="fas fa-pencil-alt"></i>
+                  </div>
+                </div>
+                <div class="inner-line2">
+                  <div class="inner-line2-icons"> <!--TODO: how to customize the width and height-->
+                    <i class="fas fa-calendar-alt"></i>
+                  </div>
+                  <div class="inner-line2-icons">
+                    1/12
+                  </div>
+                  <div class="inner-line2-icons">
+                    <i class="far fa-file"></i>
+                  </div>
+                  <div class="inner-line2-icons">
+                    <i class="far fa-comment"></i>
+                  </div>
+                </div>
+              </div>
+            </label>
+            <label onclick="clickCheckbox()">
+                <div class="container-inner-white"> <!-- TODO: how to repeat the whole container-inner without copying the code >> REACT-->
+                  <div class="inner-line1">
+                    <span class="checkmark" id="checkmarkID"></span>
+                    <input type="checkbox" class="square">
+                    <div class="inner-text">Type Something Here...</div>
+                    <div class="inner-line1-icons">
+                      <div style="font-size:24px; color:white; margin-right:20px">
+                        <i class="fas fa-star"></i>
+                      </div>
+                      <i class="fas fa-pencil-alt"></i>
+                    </div>
+                  </div>
+                  <div class="inner-line2">
+                    <div class="inner-line2-icons"> <!--TODO: how to customize the width and height-->
+                      <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="inner-line2-icons">
+                      7/30
+                    </div>
+                    <div class="inner-line2-icons">
+                      <i class="far fa-file"></i>
+                    </div>
+                    <div class="inner-line2-icons">
+                      <i class="far fa-comment"></i>
+                    </div>
+                  </div>
+                </div>
+              </label>
+    </div>
+  </body>
+</html>
+
