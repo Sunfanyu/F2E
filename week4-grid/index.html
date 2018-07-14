@@ -1,0 +1,721 @@
+<!doctype html>
+
+<html>
+<head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  
+  <title>
+    week 4
+  </title>    
+
+  <style type="text/css">
+  :root {
+    --green: #50E3C2;
+    --column: 120px;
+    --row: 100px;
+  }
+
+  * {
+    box-sizing: border-box; /*令border數值包在box裡面*/
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .wrap {
+    width: 960px;
+    height: 2000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(8, 120px);
+    grid-template-rows: repeat(20, 100px);
+  }
+
+  .header {
+    grid-column: 3 / 7;
+    text-align: center;
+  }
+  .header1 {
+    background: #000;
+    /* width: 131px;
+    height: 27px; */
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    padding: 4px 8px;
+    font-weight: bold;
+
+  }
+  .header2 {
+    font-size: 72px;
+    font-weight: 900;
+  }
+
+  .section1 {
+    grid-column: 1 / span 4;
+    grid-row: 3 / 7;
+    position: relative;
+  }
+  .item1-title {
+    font-size: 48px;
+    font-weight: 900;
+    position: relative; /*讓陰影重疊*/
+    top: -18px; /*微調位置*/
+  }
+  .item1-title:before, .item1-title:after {
+    content: attr(data-title);
+    position: absolute; /*讓陰影重疊*/
+    left: 0; /*讓陰影重疊*/
+    overflow: hidden; /*重疊的地方裁切*/
+  }
+  .item1-title:before {
+    top: -17px;
+    opacity: 0.3;
+    height: 26px;
+  }
+  .item1-title:after {
+    top: -25px;
+    opacity: 0.1;
+    height: 17px;
+  }
+  .item1-num {
+    font-size: 48px;
+    font-weight: 900;
+    position: absolute;
+    bottom: -50px
+  }
+  .item1-category {
+    font-size: 24px;
+    font-weight: 700;
+    font-style: italic;
+    position: absolute;
+    right: -74px;
+    bottom: 23px;
+    transform: rotate(90deg);
+  }
+  .item1-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+  }
+  .item1-decorationBox {
+    width: 240px;
+    height: 200px;
+    border: 20px #50E3C2 solid;
+    position: absolute;
+    right: -60px;
+    top: -50px;
+    z-index: -3;
+  }
+  .item1-decorationLine {
+    width: 240px;
+    height: 100px;
+    background-image: url(https://hexschool.github.io/THE_F2E_Design/week4-product%20gallery/assets/pattern%20unit.png);
+    position: absolute;
+    left: 60px;
+    bottom: -50px;
+  }
+
+  .section2 {
+    grid-column: 6 / span 2;
+    grid-row: 4 / 6;
+    position: relative;
+  }
+  .item2-title {
+    font-size: 48px;
+    font-weight: 900;
+    position: relative; /*讓陰影重疊*/
+    right: -120px;
+    bottom: -220px;
+  }
+  .item2-title:before, .item2-title:after {
+    content: attr(data-title);
+    position: absolute; /*讓陰影重疊*/
+    right: 30px; /*讓陰影重疊*/
+    overflow: hidden; /*重疊的地方裁切*/
+  }
+  .item2-title:before {
+    top: -17px;
+    opacity: 0.3;
+    height: 26px;
+  }
+  .item2-title:after {
+    top: -27px;
+    opacity: 0.1;
+    height: 19px;
+  }
+  .item2-num {
+    font-size: 48px;
+    font-weight: 900;
+    position: absolute;
+    right: -120px;
+    top: -105px;
+  }
+  .item2-category {
+    font-size: 24px;
+    font-weight: 700;
+    font-style: italic;
+    position: absolute;
+    left: -15px;
+    top: -25px;
+  }
+  .item2-img {
+    position: absolute;
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .item2-decorationBox {
+    width: 240px;
+    height: 200px;
+    border: 20px #50E3C2 solid;
+    position: absolute;
+    z-index: -3;
+    top: -100px;
+    right: -120px;
+  }
+  .item2-decorationBox2 {
+    width: 240px;
+    height: 200px;
+    background-color: #50E3C2;
+    position: absolute;
+    z-index: -2;
+    top: -50px;
+    right: -60px;
+  }
+
+  .section3 {
+    grid-column: 1 / 5;
+    grid-row: 9 / 11;
+    position: relative;
+  }
+  .item3-title {
+    font-size: 48px;
+    font-weight: 900;
+    position: relative; /*讓陰影重疊*/
+    right: -144px;
+    top: -53px;
+  }
+  .item3-title:before, .item3-title:after {
+    content: attr(data-title);
+    position: absolute; /*讓陰影重疊*/
+    right: 30px; /*讓陰影重疊*/
+    overflow: hidden; /*重疊的地方裁切*/
+  }
+  .item3-title:before {
+    opacity: 0.3;
+    height: 26px;
+    right: 144px;
+    top: -16px;
+  }
+  .item3-title:after {
+    opacity: 0.1;
+    height: 19px;
+    top: -27px;
+    right: 144px;
+  }
+  .item3-num {
+    font-size: 48px;
+    font-weight: 900;
+    position: absolute;
+    right: -55px;
+    bottom: -57px;
+  }
+  .item3-category {
+    font-size: 24px;
+    font-weight: 700;
+    font-style: italic;
+    position: absolute;
+    left: 30px;
+    bottom: -28px;
+  }
+  .item3-img {
+    position: absolute;
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .item3-decorationBox {
+    width: 240px;
+    height: 200px;
+    border: 20px #50E3C2 solid;
+    position: absolute;
+    z-index: -3;
+    left: 300px;
+  }
+  .item3-decorationBox2 {
+    width: 240px;
+    height: 200px;
+    background-color: #50E3C2;
+    position: absolute;
+    z-index: -2;
+    top: -50px;
+  }
+
+  .section4 {
+    grid-column: 7 / 9;
+    grid-row: 9 / span 4;
+    position: relative;
+  }
+  .item4-title {
+    font-size: 48px;
+    font-weight: 900;
+    position: relative; /*讓陰影重疊*/
+    left: -144px;
+    top: -2px;
+    transform: rotate(-90deg);
+  }
+  .item4-title:before, .item4-title:after {
+    content: attr(data-title);
+    position: absolute; /*讓陰影重疊*/
+    right: 30px; /*讓陰影重疊*/
+    overflow: hidden; /*重疊的地方裁切*/
+  }
+  .item4-title:before {
+    opacity: 0.3;
+    height: 26px;
+    right: 93px;
+    top: -16px;
+  }
+  .item4-title:after {
+    opacity: 0.1;
+    height: 19px;
+    top: -25px;
+    right: 93px;
+  }
+  .item4-num {
+    font-size: 48px;
+    font-weight: 900;
+    position: absolute;
+    left: -60px;
+    bottom: -10px;
+  }
+  .item4-category {
+    font-size: 24px;
+    font-weight: 700;
+    font-style: italic;
+    position: absolute;
+    left: 100px;
+    top: -100px;
+    transform: rotate(90deg);
+  }
+  .item4-img {
+    position: absolute;
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .item4-decorationBox {
+    width: 240px;
+    height: 200px;
+    border: 20px #50E3C2 solid;
+    position: absolute;
+    z-index: -3;
+    top: -120px;
+    left: -50px;
+  }
+  .item4-decorationLine {
+    position: absolute;
+    width: 240px;
+    height: 100px;
+    background-image: linear-gradient(135deg,
+      var(--green) 0px,
+      var(--green) 20px,
+
+      transparent 20px,
+      transparent 40px,
+
+      var(--green) 40px,
+      var(--green) 60px,
+
+      transparent 60px,
+      transparent 80px
+    );
+    background-size: 56px 56px;
+    bottom: -50px;
+  }
+
+  .section5 {
+    grid-column: 3 / 5;
+    grid-row: 13 / 15;
+    position: relative;
+  }
+  .item5-title {
+    font-size: 48px;
+    font-weight: 900;
+    position: relative; /*讓陰影重疊*/
+    left: -240px;
+    top: 50px;
+  }
+  .item5-title:before, .item5-title:after {
+    content: attr(data-title);
+    position: absolute; /*讓陰影重疊*/
+    right: 30px; /*讓陰影重疊*/
+    overflow: hidden; /*重疊的地方裁切*/
+  }
+  .item5-title:before {
+    opacity: 0.3;
+    height: 26px;
+    right: -87px;
+    top: -16px;
+  }
+  .item5-title:after {
+    opacity: 0.1;
+    height: 19px;
+    top: -25px;
+    right: -87px;
+  }
+  .item5-num {
+    font-size: 48px;
+    font-weight: 900;
+    position: absolute;
+    left: -119px;
+    bottom: -2px;
+  }
+  .item5-category {
+    font-size: 24px;
+    font-weight: 700;
+    font-style: italic;
+    position: absolute;
+    left: 240px;
+    top: 0px;
+    white-space:nowrap; /*強迫不換行*/
+  }
+  .item5-img {
+    position: absolute;
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: rotateY(180deg);
+  }
+  .item5-decorationBox {
+    width: 240px;
+    height: 100px;
+    border: 20px #50E3C2 solid;
+    position: absolute;
+    z-index: -3;
+    left: -120px;
+    bottom: -50px;
+  }
+  .item5-decorationLine {
+    width: 240px;
+    height: 100px;
+    background-image: url(https://hexschool.github.io/THE_F2E_Design/week4-product%20gallery/assets/pattern%20unit.png);
+    position: absolute;
+    left: -180px;
+    top: -50px;
+  }
+
+  .section6 {
+    grid-column: 5 / 9;
+    grid-row: 15 / 19;
+    position: relative;
+  }
+  .item6-title {
+    font-size: 48px;
+    font-weight: 900;
+    position: relative; /*讓陰影重疊*/
+    right: -122px;
+    top: -53px;
+  }
+  .item6-title:before, .item6-title:after {
+    content: attr(data-title);
+    position: absolute; /*讓陰影重疊*/
+    right: 30px; /*讓陰影重疊*/
+    overflow: hidden; /*重疊的地方裁切*/
+    white-space:nowrap;
+  }
+  .item6-title:before {
+    opacity: 0.3;
+    height: 26px;
+    right: 122px;
+    top: -16px;
+  }
+  .item6-title:after {
+    opacity: 0.1;
+    height: 19px;
+    top: -25px;
+    right: 122px;
+  }
+  .item6-num {
+    font-size: 48px;
+    font-weight: 900;
+    position: absolute;
+    left: -60px;
+    top: 150px;
+  }
+  .item6-category {
+    font-size: 24px;
+    font-weight: 700;
+    font-style: italic;
+    position: absolute;
+    bottom: -30px;
+    right: 180px;
+  }
+  .item6-img {
+    position: absolute;
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .item6-decorationBox {
+    width: calc(120px * 4);
+    height: 200px;
+    border: 20px #50E3C2 solid;
+    position: absolute;
+    z-index: -3;
+    bottom:-50px;
+  }
+  .item6-decorationBox2 {
+    width: 240px;
+    height: 200px;
+    background-color: #50E3C2;
+    position: absolute;
+    z-index: -2;
+    top: 200px;
+    left: -60px;
+  }
+
+  .section7 {
+    grid-column: 1 / 3;
+    grid-row: 17 / 21;
+    position: relative;
+  }
+  .item7-title {
+    font-size: 48px;
+    font-weight: 900;
+    position: relative; /*讓陰影重疊*/
+    right: -144px;
+    top: 90px;
+    transform: rotate(90deg);
+  }
+  .item7-title:before, .item7-title:after {
+    content: attr(data-title);
+    position: absolute; /*讓陰影重疊*/
+    right: 30px; /*讓陰影重疊*/
+    overflow: hidden; /*重疊的地方裁切*/
+    white-space:nowrap;
+  }
+  .item7-title:before {
+    opacity: 0.3;
+    height: 26px;
+    right: 56px;
+    top: -17px;
+  }
+  .item7-title:after {
+    opacity: 0.1;
+    height: 19px;
+    right: 56px;
+    top: -25px;
+  }
+  .item7-num {
+    font-size: 48px;
+    font-weight: 900;
+    position: absolute;
+    right: -118px;
+    bottom: -5px;
+  }
+  .item7-category {
+    font-size: 24px;
+    font-weight: 700;
+    font-style: italic;
+    position: absolute;
+    top: -25px;
+  }
+  .item7-img {
+    position: absolute;
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .item7-decorationBox {
+    height: calc(100px * 4.5);
+    width: 200px;
+    border: 20px #50E3C2 solid;
+    position: absolute;
+    z-index: -3;
+    bottom: 0px;
+    right: -60px;
+  }
+  .item7-decorationBox2 {
+    width: 240px;
+    height: 200px;
+    background-color: #50E3C2;
+    position: absolute;
+    z-index: -2;
+    right: -120px;
+    bottom: 0px;
+  }
+  </style>
+</head>
+
+<body>
+  <script></script>
+
+  <div class="wrap">
+    <div class="header">
+      <div class="header1">CCCLOTHES</div>
+      <div class="header2">MEN’S TOPS</div>
+    </div>
+    
+    <div class="section1">
+      <div class="item1-title" data-title="LINEN BLAZER">
+        LINEN BLAZER
+      </div>
+      <div class="item1-num">
+        01
+      </div>
+      <div class="item1-category">
+        Men's outfit
+      </div>
+      <div class="item1-img" style="background-image: url(https://images.unsplash.com/photo-1513827379601-9dba5099a3f9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1acdd78f34ee75aade9e313251bb1695&auto=format&fit=crop&w=3334&q=80)">
+      </div>
+      <div class="item1-decorationBox">
+      </div>
+      <div class="item1-decorationLine">
+      </div>
+    </div>
+
+    <div class="section2">
+      <div class="item2-title" data-title="FREELIFT">
+        FREELIFT
+      </div>
+      <div class="item2-num">
+        02
+      </div>
+      <div class="item2-category">
+        Men's basics
+      </div>
+      <div class="item2-img" style="background-image: url(https://images.unsplash.com/photo-1514632542677-48fae74a01b2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cf412aceb1d689765e387d30fca7210a&auto=format&fit=crop&w=934&q=80)">
+      </div>
+      <div class="item2-decorationBox">
+      </div>
+      <div class="item2-decorationBox2">
+      </div>
+    </div>
+
+    <div class="section3">
+      <div class="item3-title" data-title="SUPER SKINNY">
+        SUPER SKINNY
+      </div>
+      <div class="item3-num">
+        03
+      </div>
+      <div class="item3-category">
+        Men's pattern shirts
+      </div>
+      <div class="item3-img" style="background-image: url(https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a0f994eef47e5fb1a67849703cc961b3&auto=format&fit=crop&w=2250&q=80)">
+      </div>
+      <div class="item3-decorationBox">
+      </div>
+      <div class="item3-decorationBox2">
+      </div>
+    </div>
+
+    <div class="section4">
+      <div class="item4-title" data-title="DENIM">
+        DENIM
+      </div>
+      <div class="item4-num">
+        04
+      </div>
+      <div class="item4-category">
+        Men's cadual
+      </div>
+      <div class="item4-img" style="background-image: url(https://images.unsplash.com/photo-1484516758160-69878111a911?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=39466d66952b133d5a5cff642b970d05&auto=format&fit=crop&w=1287&q=80)">
+      </div>
+      <div class="item4-decorationBox">
+      </div>
+      <div class="item4-decorationLine">
+      </div>
+    </div>
+
+    <div class="section5">
+      <div class="item5-title" data-title="SWEATSHIRTS">
+        SWEATSHIRTS
+      </div>
+      <div class="item5-num">
+        05
+      </div>
+      <div class="item5-category">
+        Men's jacket      
+      </div>
+      <div class="item5-img" style="background-image: url(https://images.unsplash.com/photo-1525448198276-222de3961638?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=43fb25556cdbd191e520c7f28739e40d&auto=format&fit=crop&w=3300&q=80)">
+      </div>
+      <div class="item5-decorationBox">
+      </div>
+      <div class="item5-decorationLine">
+      </div>
+    </div>
+
+    <div class="section6">
+      <div class="item6-title" data-title="VINTAGE DENIM">
+        VINTAGE DENIM
+      </div>
+      <div class="item6-num">
+        06
+      </div>
+      <div class="item6-category">
+        Men's classic
+      </div>
+      <div class="item6-img" style="background-image: url(https://images.unsplash.com/photo-1519406709381-c1f293304b28?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=98c497a29f229085d9574ee8b6eeef8c&auto=format&fit=crop&w=934&q=80)">
+      </div>
+      <div class="item6-decorationBox">
+      </div>
+      <div class="item6-decorationBox2">
+      </div>
+    </div>
+
+    <div class="section7">
+      <div class="item7-title" data-title="EDITION">
+        EDITION
+      </div>
+      <div class="item7-num">
+        07
+      </div>
+      <div class="item7-category">
+        Men's shirts
+      </div>
+      <div class="item7-img" style="background-image: url(https://images.unsplash.com/photo-1516914943479-89db7d9ae7f2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=63ff45d79414b3166b08b800a32018be&auto=format&fit=crop&w=934&q=80)">
+      </div>
+      <div class="item7-decorationBox">
+      </div>
+      <div class="item7-decorationBox2">
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
