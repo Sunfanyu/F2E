@@ -1,0 +1,253 @@
+<!doctype html>
+
+<html>
+<head>
+  <script src="jquery.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+  <title>week 6</title>    
+
+  <style type="text/css"> 
+
+  * {
+    box-sizing: border-box;
+  }
+
+  :root {
+    --blue:#0275D8;
+    --lightBlue:#BEE1FF;
+    --orange:#F5A623;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .wrap {
+    width: 1024px;
+    height: 768px;
+    margin: 0 auto;
+  }
+
+  .header {
+    width: 456px;
+    height: 3px;
+    background-color: var(--blue);
+    margin: 0 auto 60px auto;
+  }
+
+  .stepBar {
+    width: 260px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .outer-dot1, .outer-dot2, .outer-dot3, .outer-dot4 {
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--lightBlue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .outer-dot1 {
+    border: 2px solid var(--blue);    
+  }
+
+  .inner-dot1::after, .inner-dot2::after, .inner-dot3::after  {
+    content: "";
+    display: inline-block;
+    width: 66px;
+    height: 2px;
+    background-color: var(--lightBlue);
+    position: absolute;
+    right: -70px;
+    top: 2px;
+  }
+
+  .inner-dot1, .inner-dot2, .inner-dot3, .inner-dot4 {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--lightBlue);
+    position: relative;
+
+  }
+  .inner-dot1 {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--blue);
+  }
+
+  .title {
+    font-size: 48px;
+    margin-top: 40px;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .content {
+    margin-left: 282px;
+  }
+  .account, .pw, .comfirmPw {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  .account-form, .pw-form, .comfirmPw-form {
+    width: 460px;
+    height: 52px;
+    border: black 2px solid;
+    border-radius: 5px;
+    margin-bottom: 24px;
+  }
+  ::placeholder {
+    font-size: 20px;
+    color: #999999;
+  }
+  #form2::placeholder, #form3::placeholder {
+    font-size: 12px;
+    padding-left: 20px;
+    color: #999999;
+    letter-spacing: 3px;
+  }
+
+  .bt-summit {
+    width: 460px;
+    height: 52px;
+    background-color: #BEE1FF;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+  }
+
+  .bt-summit1 {
+    width: 460px;
+    height: 52px;
+    background-color: var(--blue);
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+  }
+
+  input {
+    font-size: 20px;
+    padding-left: 20px;
+  }
+
+  
+  </style>
+
+</head>
+
+<body>
+  
+
+<div class="wrap">
+  <div class="header">
+  </div>
+  <div class="stepBar">
+    <div class="outer-dot1">
+      <div class="inner-dot1">
+
+      </div>
+    </div>
+    <div class="outer-dot2">
+      <div class="inner-dot2">
+        
+      </div>
+    </div>
+    <div class="outer-dot3">
+      <div class="inner-dot3">
+        
+      </div>
+    </div>
+    <div class="outer-dot4">
+      <div class="inner-dot4">
+        
+      </div>
+    </div>
+  </div>
+  <div class="title">
+    Create Account
+  </div>
+  <div class="subtitle">
+    Glad to see you here!
+  </div>
+  <div class="content">
+    <div class="account">
+      Account
+    </div>
+    <input type="text" name="account-form" placeholder="example@gmail.com" class="account-form" id="form1"/>
+
+    <div class="pw">
+      Password
+    </div>
+    <input type="password" name="pw-form" placeholder="●●●●●●●●" class="pw-form" id="form2"/>
+
+    <div class="comfirmPw">
+      Comfirm Password
+    </div>
+    <input type="password" name="comfirmPw-form" placeholder="●●●●●●●●" class="comfirmPw-form" id="form3"/>
+
+    <button class="bt-summit" id="bt">
+      SUMMIT & NEXT
+    </button>
+  </div>
+</div>
+
+<script>
+  $('#form1').focus(function() {
+    $(this).attr('placeholder', '')
+    }).blur(function() {
+      $(this).attr('placeholder', 'example@email.com')
+  })
+  $('#form2').focus(function() {
+    $(this).attr('placeholder', '')
+    }).blur(function() {
+      $(this).attr('placeholder', '●●●●●●●●')
+  })
+  $('#form3').focus(function() {
+    $(this).attr('placeholder', '')
+    }).blur(function() {
+      $(this).attr('placeholder', '●●●●●●●●')
+  })
+
+  function validateEmail($email) {
+  var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+  return emailReg.test( $email );
+  } 
+
+//FIXME: below two functions can be mixed into 1
+
+  $('#form2, #form3').on('input', function () {
+  if ($('#form2').val() == $('#form3').val()) {
+    $('#bt').removeClass('bt-summit').addClass('bt-summit1');
+  } else 
+    $('#bt').removeClass('bt-summit1').addClass('bt-summit');
+  });
+
+  $('#form1').on('input', function() {
+    if(validateEmail($(this).val())) {
+      $('#bt').removeClass('bt-summit').addClass('bt-summit1');
+    } else {
+      $('#bt').removeClass('bt-summit1').addClass('bt-summit');
+    }
+  });
+
+  
+</script>
+</body>
+</html>
