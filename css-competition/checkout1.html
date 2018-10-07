@@ -1,0 +1,614 @@
+<!doctype html>
+
+<html>
+<head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  
+  <title>
+    checkout-1
+  </title>    
+  <!-- https://xd.adobe.com/spec/934efdb7-a7e4-47d5-572e-efece0914f62-e57f/ -->
+  <style type="text/css">
+
+  a:link {
+    text-decoration: none;
+    color: #3F5D45;
+  }
+
+  a:visited {
+    text-decoration: none;
+    color: #3F5D45;    
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    /* border: 1px red solid; */
+    box-sizing: border-box;
+  }
+
+  .home {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  header {
+    height: 100px;
+    display: flex;
+
+  }
+
+  .logo {
+    width: 211.22px;
+  }
+
+  .container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .wrapper {
+    width: 940px;
+    margin-left: 42px;
+  }
+
+  header > .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  navigation {
+    display: flex;
+  }
+
+  .header-word {
+    margin-left: 60px;
+    font-size: 16px;
+    font-family: PingFang TC;
+    font-weight: 500;
+    color: #3F5D45;
+  }
+
+  .inner {
+    margin-top: 30px;
+    margin-bottom: 65px;
+  }
+
+  .inner-left-top {
+    width: 460px;
+    height: 512px;
+    background-color: #3F5D45;
+
+  }
+
+  .inner-left-bot {
+    width: 460px;
+    height: 65px;
+    background-color: #FFE180;
+    color: #3F5D45;
+    text-align: center;
+    line-height: 65px;
+    font-family: PingFang TC;
+    font-weight: 500;
+    font-size: 24px;
+  }
+
+  .left-title {
+    display: flex;
+  }
+
+  .left-title-1 {
+    color: #EAF0ED;
+    font-size: 36px;
+    font-family: PingFang TC;
+    font-weight: 500;
+    margin: 0 125px 30px 40px;
+    padding-top: 30px;
+  }
+
+  .left-title-process {
+    display: flex;
+    margin-top: 49px;
+  }
+
+  .process-dot1 {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #EAF0ED;
+    position: relative;
+    left: 16px;
+    top: 3px;
+  }
+
+  .process-dot1-outline {
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;    
+    background-color: #3F5D45;
+    border: solid 1px #EAF0ED;
+  }
+
+  .process-dot2 {
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;    
+    background-color: #3F5D45;
+    border: solid 1px #8DA291;
+  }
+
+  .process-dot3 {
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;    
+    background-color: #3F5D45;
+    border: solid 1px #8DA291;
+  }
+
+  .process-bar1 {
+    background-color: #8DA291;
+    width: 60px;
+    height: 1px;
+    margin-top: 10px;
+  }
+
+  .process-bar2 {
+    background-color: #8DA291;    
+    width: 60px;
+    height: 1px;
+    margin-top: 10px;
+  }
+
+  .inner {
+    display: flex;
+    justify-content: center;
+  }
+
+  .inner-left {
+    margin-right: 20px;
+  }
+
+  .left-section1 {
+    display: flex;
+    margin-left: 40px;
+    margin-bottom: 16px;
+  }
+
+  .left-section1-left {
+    margin-right: 8px;
+  }
+
+  .left-section1-left, .left-section1-right, .left-section2 {
+    color: #EAF0ED;
+    font-size: 20px;
+    font-family: PingFang TC;
+    font-weight: 500;
+    line-height: 38px;
+  }
+
+  .left-section1-left input, .left-section1-right input {
+    width: 186px;
+    height: 56px;
+    background-color: #EAF0ED;
+    color: #8DA291;
+    font-size: 16px;
+    font-family: PingFang TC;
+    font-weight: lighter;
+    padding-left: 20px;
+  }
+
+  .left-section2 {
+    margin-left: 40px;    
+    margin-bottom: 8px;
+  }
+
+  .left-section2 input, .left-section3 > input {
+    width: 380px;
+    height: 56px;
+    background-color: #EAF0ED;
+    color: #8DA291;
+    font-size: 16px;
+    font-family: PingFang TC;
+    font-weight: lighter;
+    padding-left: 20px;
+  }
+
+  .left-section3 {
+    display: flex;
+    flex-direction: column;
+    color: #EAF0ED;
+    font-size: 20px;
+    font-family: PingFang TC;
+    font-weight: 500;
+    line-height: 38px;
+    margin-left: 40px;
+  }
+
+  .left-section3 > div {
+    margin-bottom: 8px;
+  }
+
+  .left-section3 > div > input {
+    width: 186px;
+    height: 56px;
+    background-color: #EAF0ED;
+    color: #8DA291;
+    font-size: 16px;
+    font-family: PingFang TC;
+    font-weight: lighter;
+    padding-left: 20px;
+  }
+
+  .right-top, .right-bot {
+    width: 300px;
+    height: 65px;
+    background-color: #EAF0ED;
+    color: #8DA291;
+    font-size: 24px;
+    font-family: PingFang TC;
+    font-weight: 500;
+    line-height: 65px;
+    text-align: center;
+  }
+
+  .right-top-bot {
+    width: 300px;
+    height: 128px;
+    border: #EAF0ED solid 1px;
+    margin-bottom: 20px;
+  }
+
+  .main-right-top-number, .total {
+    display: flex;
+    font-weight: 300;
+    font-family: PingFang TC;
+    color: #8DA291; 
+  }
+
+  .total {
+    font-weight: 500;
+    font-family: PingFang TC;
+    font-size: 20px;
+  }
+
+  .total div:nth-child(1) {
+    margin: 16px 121px 16px 20px;
+  }
+
+  .total div:nth-child(2) {
+    margin-top: 16px;
+  }  
+
+  .main-right-top-number > div:nth-child(1) {
+    font-size: 16px;
+    margin: 16px 149px 0 18px;
+    line-height: 26px;
+  }
+
+  .main-right-top-number > div:nth-child(2) {
+    text-align: end;
+    margin-top: 16px;
+    line-height: 26px;
+  } 
+
+  .main-right-top > div:nth-child(1){
+    width: 260px;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: PingFang TC;  
+    padding: 16px 0 16px 0;
+    border-bottom: #EAF0ED solid 1px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .right-bot-bot {
+    width: 300px;
+    height: 304px;
+    border: #EAF0ED solid 1px;
+  }
+
+  .order1, .order2, .order3 {
+    margin-top: 16px;
+    height: 80px;
+    display: flex;
+  }
+
+  .order-pic1, .order-pic2, .order-pic3 {
+    width: 120px;
+    height: 80px;
+    background-position: center center;
+    background-size: cover;  
+    margin: 0 20px 0 20px; 
+  }
+
+  .order-pic1 {
+    background-image: url("pics/order1.jpg"); 
+  }
+
+  .order-pic2 {
+    background-image: url("pics/order2.jpg"); 
+  }
+
+  .order-pic3 {
+    background-image: url("pics/order3.jpg"); 
+  }
+
+  .order-name {
+    color: #8DA291;
+    font-size: 16px;
+    font-weight: lighter;
+    font-family: PingFang TC;  
+    margin-top: 12px;
+    margin-bottom: 5px;
+  }
+
+  .order-price {
+    color: #8DA291;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: PingFang TC;  
+  }
+  
+  .footer-top {
+    width: 100%;
+    height: 116px;
+    background-color: #3F5D45;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-top img:nth-child(1) {
+    margin-right: 20px;
+  }
+
+  .footer-top div:nth-child(2) {
+    font-size: 24px;
+    font-family: Helvetica Neue;
+    color: #EAF0ED;
+    font-weight: 300;
+    margin-right: 124px;
+  }
+
+  .footer-top div:nth-child(3) {
+    width: 316px;
+    height: 56px;
+    background-color: #EAF0ED;
+  }
+
+  .mailIcon {
+    color: #3F5D45;
+    font-size: 22px;
+    margin: 16px 0 0 20px;
+  }
+
+  .footer-top div:nth-child(4) {
+    width: 64px;
+    height: 56px;
+    background-color: #FFE180;
+  }
+
+  .arrowIcon {
+    font-size: 16px;
+    color: #3F5D45;
+    text-align: center;
+    line-height: 58px;
+  }
+
+  .footer-bot {
+    width: 100%;
+    height: 341px;
+    background-color: #EAF0ED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-bot-left {
+    margin-top: 38.9px;
+    width: 227px;
+    margin-right: 295px;
+  }
+
+  .footer-bot-left img:nth-child(1) {
+    width: 171.22px;
+    height: 26.6px;
+  }
+  
+
+  .footer-bot-left div:nth-child(2) {
+    margin-top: 115.5px;
+    font-size: 16px;
+    color: #3F5D45;
+    font-family: Helvetica Neue;
+    font-weight: 400;
+    line-height: 22px;
+  }
+
+  .footer-bot-left img:nth-child(3), .footer-bot-left img:nth-child(4) {
+    width: 32px;
+    height: 32px;
+    margin-top: 30px;
+  } 
+
+  .footer-bot-right {
+    margin-top: 10px;
+  }
+
+  .footer-bot-right img:nth-child(1) {
+    width: 59.28px;
+    height: 218.69px;
+    margin-bottom: 46.31px;
+    position: relative;
+    right: -200px;
+  }
+  
+  .footer-bot-right div:nth-child(2) {
+    font-size: 16px;
+    color: #3F5D45;
+    font-family: Helvetica Neue;
+    font-weight: 300;
+  }
+  
+
+  </style>
+</head>
+
+<body>
+  <script></script>
+  <div class="home">
+    <header>
+      <div class="wrapper">
+        <a href="home.html"><img class="logo" src="pics/logo.png"></a>
+        <div style="display: flex; align-items: center">
+          <navigation>
+            <a href="home.html"><div class="header-word">首頁</div></a>
+            <a href="product.html"><div class="header-word">甜點</div></a>
+            <a href="login.html"><div class="header-word">登入</div></a>        
+            <a href="cart.html">
+              <div style="font-size: 24px; margin-left: 79px;">   
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </a>
+          </navigation>  
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="wrapper">
+        <div class="inner">
+          <div class="inner-left">
+            <div class="inner-left-top">
+              <div class="left-title">
+                <div class="left-title-1">
+                  運送
+                </div>
+                <div class="left-title-process">
+                  <div class="process-dot1"></div>
+                  <div class="process-dot1-outline"></div>
+                  <div class="process-bar1"></div>
+                  <div class="process-dot2"></div>
+                  <div class="process-bar2"></div>
+                  <div class="process-dot3"></div>
+                </div>
+              </div>
+              <div class="left-section1">
+                <div class="left-section1-left">
+                  姓氏
+                  <p><input placeholder="王"/></p>
+                </div>
+                <div class="left-section1-right">
+                  名字
+                  <p><input placeholder="小明"/></p>                               
+                </div>              
+              </div>
+              <div class="left-section2">
+                電話
+                <p><input placeholder="0912-345-678"/></p>
+              </div>
+              <div class="left-section3">
+                地址
+                <div>
+                  <input placeholder="高雄市"/>
+                  <input placeholder="新興區"/> 
+                </div>
+                <input placeholder="幸福路 520 號"/>                      
+              </div>
+            </div>
+            <a href="checkout2.html"><div class="inner-left-bot">
+              下一步
+            </div></a>
+          </div>
+          <div class="inner-right">
+            <div class="right-top">訂單摘要</div>
+            <div class="right-top-bot">
+              <div class="main-right-top-number">
+                <div>
+                  小計
+                  <p>運費</p>
+                </div>
+                <div>
+                  NT$ 2,700
+                  <p>NT$ 300</p>
+                </div>
+              </div> 
+              <div class="total">
+                <div>總計</div>
+                <div>NT$ 3,000</div> 
+              </div>
+            </div>
+            <div class="right-bot">購物清單</div>
+            <div class="right-bot-bot">
+              <div class="order1">
+                <div class="order-pic1"></div>
+                <div>
+                  <div class="order-name">焦糖馬卡龍（2)</div>
+                  <div class="order-price">NT$ 900</div>
+                </div>
+              </div>
+              <div class="order2">
+                <div class="order-pic2"></div>
+                <div>
+                  <div class="order-name">焦糖馬卡龍（2)</div>
+                  <div class="order-price">NT$ 900</div>
+                </div>
+              </div>
+              <div class="order3">
+                <div class="order-pic3"></div>
+                <div>
+                  <div class="order-name">焦糖馬卡龍（2)</div>
+                  <div class="order-price">NT$ 900</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+      </div>
+      <div class="footer-top">
+        <img src="pics/logo-light.png"/>
+        <div>訂閱你我的甜蜜郵件</div>
+        <div>
+          <div class="mailIcon">
+            <i class="fas fa-envelope"></i>            
+          </div>
+        </div>
+        <div>
+          <div class="arrowIcon">
+            <i class="fas fa-arrow-right"></i>            
+          </div>
+        </div>
+      </div>
+      <div class="footer-bot">
+        <div class="footer-bot-left">
+          <img src="pics/logo2.png"/>
+          <div>
+            07-1234-5678
+            <p>sweetaste@email.com</p>
+            <p>800 高雄市新興區幸福路 520 號</p>
+          </div>
+          <img src="pics/mail.png"/>                    
+          <img src="pics/fb.png"/>
+        </div>
+        <div class="footer-bot-right">
+          <img src="pics/dessertGoodDay.png"/>
+          <div>© 2018 Sweetaste* All Rights Reserved</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+

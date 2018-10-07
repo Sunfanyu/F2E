@@ -1,0 +1,531 @@
+<!doctype html>
+
+<html>
+<head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  
+  <title>
+    Product
+  </title>    
+  <!-- https://xd.adobe.com/spec/934efdb7-a7e4-47d5-572e-efece0914f62-e57f/ -->
+  <style type="text/css">
+
+  a:link {
+    color: #3F5D45;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: #3F5D45;
+    text-decoration: none;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    /* border: 1px red solid; */
+  }
+
+  .home {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  header {
+    height: 100px;
+    display: flex;
+
+  }
+
+  .logo {
+    width: 211.22px;
+  }
+
+  .container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .wrapper {
+    width: 940px;
+    margin-left: 42px;
+  }
+
+  header > .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  navigation {
+    display: flex;
+  }
+
+  .header-word {
+    margin-left: 60px;
+    font-size: 16px;
+    font-family: PingFang TC;
+    font-weight: 500;
+    color: #3F5D45;
+  }
+
+  .pic1 {
+    width: 940px;
+    height: 496px;
+    background-position: center center;
+    background-size: cover;    
+    background-image: url("pics/head-pic.jpg");  
+  }
+
+  .section2 {
+    display: flex;
+  }
+
+  .category {
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+  }
+
+  .category > div {
+    width: 300px;
+    height: 65px;
+    font-size: 24px;
+    text-align: center;
+    line-height: 65px;
+    border: solid 1px #EAF0ED;
+    border-top: none;
+    color: #3F5D45;
+    font-family: PingFang TC;
+    font-weight: 500;
+  }
+
+  .category div:nth-child(1) {
+    background-color: #3F5D45;
+    color: #EAF0ED; 
+    border-right: none;
+    border-left: none;
+  }
+
+  .category div:nth-child(2) {
+    background-color: #EAF0ED;
+  }
+
+  .section2-right {
+    margin-top: 60px;
+    display: flex;
+    margin-bottom: 60px;
+    flex-direction: column;
+  }
+
+  .section2-right > div {
+    display: flex;    
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .first-line, .second-line, .third-line {
+    height: 436px;   
+    margin-right: 20px;     
+  }
+
+  .product-pic1, .product-pic2, .product-pic3, .product-pic4, .product-pic5, .product-pic6{
+    width: 300px;
+    height: 315px;
+    background-position: center center;
+    background-size: cover;    
+  }
+
+  .jingxuan-left {
+    margin-right: 20px;
+  }
+
+  .product-pic1 {   
+    background-image: url("pics/product-pic1.png"); 
+  }
+
+  .product-pic2 {   
+    background-image: url("pics/product-pic2.png"); 
+  }
+
+  .product-pic3 {   
+    background-image: url("pics/product-pic3.png"); 
+  }
+
+  .product-pic4 {   
+    background-image: url("pics/product-pic4.png"); 
+  }
+
+  .product-pic5 {   
+    background-image: url("pics/product-pic5.png"); 
+  }
+
+  .product-pic6 {   
+    background-image: url("pics/product-pic6.png"); 
+  }
+
+  .hot-info {
+    width: 300px;
+    height: 56px;
+    display: flex;
+    border-left: solid #EAF0ED 1px;
+    border-right: solid #EAF0ED 1px;    
+  }
+
+  .hot-info div:nth-child(1) {
+    width: 172px;
+    text-align: center;
+    line-height: 56px;
+    background: white;
+    font-size: 20px;
+    font-family: PingFang TC;
+    color: #3F5D45;
+    font-weight: 300;
+  }
+
+  .hot-info div:nth-child(2) {
+    width: 125px;
+    border-left: solid #EAF0ED 1px;
+    text-align: center;
+    line-height: 56px;
+    font-size: 20px;
+    font-family: PingFang TC;
+    color: #3F5D45;
+    font-weight: 500;
+  }
+
+  .addToCart {
+    width: 300px;
+    height: 56px;
+    background-color: #EAF0ED;
+    text-align: center;
+    line-height: 56px;
+    font-size: 24px;
+    font-family: PingFang TC;
+    color: #3F5D45;
+    font-weight: 500;
+  }
+
+  .benrijingxuan {
+    writing-mode: vertical-lr;   /*變直行*/    
+    background-color: #3F5D45;
+    width: 36px;
+    height: 106.73px;
+    color: #EAF0ED;
+    font-family: PingFang TC;
+    font-weight: 400;
+    display: inline-block;
+    position: relative;
+    left: 20px;
+    top: -426px;
+    text-align: center;
+    line-height: 36px;
+    letter-spacing: 4px;
+  }
+
+  .heart {
+    position: relative;
+    left: 260px;
+    top: -525px;
+    color: #3F5D45;
+    font-size: 22px;
+  }
+
+  .pages {
+    position: relative;
+    right: -320px;
+  }
+
+  .pages  div {
+    width: 59px;
+    height: 60px;
+    border: solid #EAF0ED 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-family: PingFang TC;
+  }
+
+  .box-1, .box-3, .box-4, .box-5 {
+    color: #3F5D45;
+  }
+
+  .box-2 {
+    background-color: #3F5D45;
+    border: solid 1px #3F5D45;
+    color: white;
+    font-weight: 500;
+  }
+  
+  .footer-top {
+    width: 100%;
+    height: 116px;
+    background-color: #3F5D45;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-top img:nth-child(1) {
+    margin-right: 20px;
+  }
+
+  .footer-top div:nth-child(2) {
+    font-size: 24px;
+    font-family: Helvetica Neue;
+    color: #EAF0ED;
+    font-weight: 300;
+    margin-right: 124px;
+  }
+
+  .footer-top div:nth-child(3) {
+    width: 316px;
+    height: 56px;
+    background-color: #EAF0ED;
+  }
+
+  .mailIcon {
+    color: #3F5D45;
+    font-size: 22px;
+    margin: 16px 0 0 20px;
+  }
+
+  .footer-top div:nth-child(4) {
+    width: 64px;
+    height: 56px;
+    background-color: #FFE180;
+  }
+
+  .arrowIcon {
+    font-size: 16px;
+    color: #3F5D45;
+    text-align: center;
+    line-height: 58px;
+  }
+
+  .footer-bot {
+    width: 100%;
+    height: 341px;
+    background-color: #EAF0ED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-bot-left {
+    margin-top: 38.9px;
+    width: 227px;
+    margin-right: 295px;
+  }
+
+  .footer-bot-left img:nth-child(1) {
+    width: 171.22px;
+    height: 26.6px;
+  }
+  
+
+  .footer-bot-left div:nth-child(2) {
+    margin-top: 115.5px;
+    font-size: 16px;
+    color: #3F5D45;
+    font-family: Helvetica Neue;
+    font-weight: 400;
+    line-height: 22px;
+  }
+
+  .footer-bot-left img:nth-child(3), .footer-bot-left img:nth-child(4) {
+    width: 32px;
+    height: 32px;
+    margin-top: 30px;
+  } 
+
+  .footer-bot-right {
+    margin-top: 10px;
+  }
+
+  .footer-bot-right img:nth-child(1) {
+    width: 59.28px;
+    height: 218.69px;
+    margin-bottom: 46.31px;
+    position: relative;
+    right: -200px;
+  }
+  
+  .footer-bot-right div:nth-child(2) {
+    font-size: 16px;
+    color: #3F5D45;
+    font-family: Helvetica Neue;
+    font-weight: 300;
+  }
+  
+
+  </style>
+</head>
+
+<body>
+  <script></script>
+  <div class="home">
+    <header>
+      <div class="wrapper">
+        <a href="home.html"><img class="logo" src="pics/logo.png"></a>
+        <div style="display: flex; align-items: center">
+          <navigation>
+            <a href="home.html"><div class="header-word">首頁</div></a>
+            <a href="product.html"><div class="header-word">甜點</div></a>
+            <a href="login.html"><div class="header-word">登入</div></a>        
+            <a href="cart.html">
+              <div style="font-size: 24px; margin-left: 79px;">   
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </a>
+          </navigation> 
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="wrapper">
+        <div class="pic1"></div>
+        <div class="section2">
+          <div>
+            <div class="category">
+              <div>甜點類別</div>
+              <div>所有甜點（48）</div>
+              <div>本日精選（10）</div>
+              <div>人氣推薦（26）</div>
+              <div>新品上市（12）</div>
+            </div>
+          </div>
+          <div class="section2-right">
+            <div class="first-line">           
+              <div class="jingxuan-left">
+                <div class="product-pic1"></div>
+                <div class="hot-info">
+                  <div>焦糖馬卡龍</div>
+                  <div>NT$ 450</div>
+                </div>
+                <div class="addToCart">加入購物車</div>
+                <div class="benrijingxuan">本日精選</div>   
+                <div class="heart">
+                  <i class="far fa-heart"></i>
+                </div>
+              </div>
+              <div class="jingxuan-right">
+                <div class="product-pic2"></div>
+                <div class="hot-info">
+                  <div>焦糖馬卡龍</div>
+                  <div>NT$ 450</div>
+                </div>
+                <div class="addToCart">加入購物車</div>
+                <div class="benrijingxuan">本日精選</div>
+                <div class="heart">
+                  <i class="far fa-heart"></i>
+                </div>                                               
+              </div>
+            </div>
+            <div class="second-line">           
+              <div class="jingxuan-left">
+                <div class="product-pic3"></div>
+                <div class="hot-info">
+                  <div>焦糖馬卡龍</div>
+                  <div>NT$ 450</div>
+                </div>
+                <div class="addToCart">加入購物車</div>
+                <div class="benrijingxuan">本日精選</div>   
+                <div class="heart">
+                  <i class="far fa-heart"></i>
+                </div>
+              </div>
+              <div class="jingxuan-right">
+                <div class="product-pic4"></div>
+                <div class="hot-info">
+                  <div>焦糖馬卡龍</div>
+                  <div>NT$ 450</div>
+                </div>
+                <div class="addToCart">加入購物車</div>
+                <div class="benrijingxuan">本日精選</div>
+                <div class="heart">
+                  <i class="far fa-heart"></i>
+                </div>                                               
+              </div>
+            </div>
+            <div class="third-line">           
+              <div class="jingxuan-left">
+                <div class="product-pic5"></div>
+                <div class="hot-info">
+                  <div>焦糖馬卡龍</div>
+                  <div>NT$ 450</div>
+                </div>
+                <div class="addToCart">加入購物車</div>
+                <div class="benrijingxuan">本日精選</div>   
+                <div class="heart">
+                  <i class="far fa-heart"></i>
+                </div>
+              </div>
+              <div class="jingxuan-right">
+                <div class="product-pic6"></div>
+                <div class="hot-info">
+                  <div>焦糖馬卡龍</div>
+                  <div>NT$ 450</div>
+                </div>
+                <div class="addToCart">加入購物車</div>
+                <div class="benrijingxuan">本日精選</div>
+                <div class="heart">
+                  <i class="far fa-heart"></i>
+                </div>                                               
+              </div>
+            </div>
+            <div class="pages">
+              <div class="box-1">
+                <i class="fas fa-caret-left"></i>
+              </div>
+              <div class="box-2">1</div>
+              <div class="box-3">2</div>
+              <div class="box-4">3</div>
+              <div class="box-5">
+                <i class="fas fa-caret-right"></i>
+              </div> 
+            </div>           
+          </div>
+        </div>
+      </div> 
+      <div class="footer-top">
+        <img src="pics/logo-light.png"/>
+        <div>訂閱你我的甜蜜郵件</div>
+        <div>
+          <div class="mailIcon">
+            <i class="fas fa-envelope"></i>            
+          </div>
+        </div>
+        <div>
+          <div class="arrowIcon">
+            <i class="fas fa-arrow-right"></i>            
+          </div>
+        </div>
+      </div>
+      <div class="footer-bot">
+        <div class="footer-bot-left">
+          <img src="pics/logo2.png"/>
+          <div>
+            07-1234-5678
+            <p>sweetaste@email.com</p>
+            <p>800 高雄市新興區幸福路 520 號</p>
+          </div>
+          <img src="pics/mail.png"/>                    
+          <img src="pics/fb.png"/>
+        </div>
+        <div class="footer-bot-right">
+          <img src="pics/dessertGoodDay.png"/>
+          <div>© 2018 Sweetaste* All Rights Reserved</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
